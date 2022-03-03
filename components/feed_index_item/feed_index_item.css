@@ -5,9 +5,12 @@
     max-height: var(--row-height);
 }
 
-[data-component="feed_index_item"] h1,
-[data-component="feed_index_item"] article,
-[data-component="feed_index_item"] p:first-child {
+[data-component="feed_index_item"] article {
+    overflow: hidden;
+    max-height: calc(var(--row-height) - 50px);
+}
+
+[data-component="feed_index_item"] h1 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
