@@ -1,7 +1,7 @@
 [data-component="feed_index_item"] {
-    --footer-height: 20px;
-    --article-height: 50px;
-    --row-height: 150px;
+    --footer-height: 35px;
+    --article-height: 60px;
+    --row-height: 190px;
     padding: 10px var(--standard-padding);
     border-bottom: 1px solid #CCC;
     height: var(--row-height);
@@ -19,7 +19,7 @@
     height: var(--footer-height);
     font-size: 0.85rem;
     color: #aaa;
-    line-height: var(--footer-height);
+    line-height: calc(var(--footer-height) /2);
 }
 
 [data-component="feed_index_item"] h1 {
