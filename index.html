@@ -24,6 +24,9 @@
                 <li>
                     <a href="#" data-show-pane="documents">Docs & Forms</a>
                 </li>
+                <li>
+                    <a href="#" data-show-pane="channels">Channels</a>
+                </li>
             </ul>
 
             <button class="filters">
@@ -31,12 +34,26 @@
             </button>
 
             <ul class="filters">
-                <p>This area is not yet ready. Working on it. —Adam</p>
                 <li>
-                    <a href="#" data-component="tag" data-apply-filter="sumy">Sumy</a>
+                    <a href="#" data-component="tag" data-apply-filter="all">All regions</a>
+                </li>
+                <li>
+                    <a href="#" data-component="tag" data-apply-filter="kharkov">Kharkov</a>
                 </li>
                 <li>
                     <a href="#" data-component="tag" data-apply-filter="kiev">Kiev</a>
+                </li>
+                <li>
+                    <a href="#" data-component="tag" data-apply-filter="lviv">Lviv</a>
+                </li>
+                <li>
+                    <a href="#" data-component="tag" data-apply-filter="medyka">Medyka</a>
+                </li>
+                <li>
+                    <a href="#" data-component="tag" data-apply-filter="odessa">Odessa</a>
+                </li>
+                <li>
+                    <a href="#" data-component="tag" data-apply-filter="sumy">Sumy</a>
                 </li>
             </ul>
         </nav>
@@ -52,6 +69,10 @@
 
         <div data-pane="documents">
             <iframe class="airtable-embed" src="https://airtable.com/embed/shrgyvKqUW4sozOHe?backgroundColor=green" frameborder="0" onmousewheel="" width="100%" height="100%" style=""></iframe>
+        </div>
+
+        <div data-pane="channels">
+            <iframe class="airtable-embed" src="https://airtable.com/embed/shrqVjBcHhMNwOTMc?backgroundColor=green" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
         </div>
     </div>
     <script src="/vendor/mozart.js"></script>
@@ -84,5 +105,5 @@
     <link rel="stylesheet" href="/panes/style.css">
     <link rel="stylesheet" href="/panes/updates.css">
     <link rel="stylesheet" href="/panes/documents.css">
-
+    <link rel="stylesheet" href="/panes/channels.css">
 </body>
