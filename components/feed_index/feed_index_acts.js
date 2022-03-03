@@ -14,7 +14,6 @@ m.feed_index.acts({
     priv: {
         create_row_markup(_$, args) {
             const r = args.record;
-            console.log(r)
             return `
               <div data-component="feed_index_item" data-feed-item-id=${r.id}>
                 <h1>${r.fields.Title}</h1>
@@ -25,7 +24,13 @@ m.feed_index.acts({
 
         bind_rows(_$, args) {
             _$.me().addEventListener("click", (e) => {
-                
+                let target = e.target;
+                if (!(target && target.dataset && target.dataset.feedItemId)) {
+                    target = target.parentNode;
+                }
+                if (target && target.dataset && target.dataset.feedItemId) {
+                    m.feed_view.act.load_in_data({ id: target.dataset.feedItemId });
+                }
             });
         }
     }
