@@ -24,8 +24,13 @@ m.feed_index.acts({
 
         bind_rows(_$, args) {
             _$.me().addEventListener("click", (e) => {
+                // TODO: Probably a better way to handle propagation
                 let target = e.target;
-                if (!(target && target.dataset && target.dataset.feedItemId)) {
+                const good_target = (target) => target && target.dataset && target.dataset.feedItemId;
+                if (!good_target(target)) {
+                    target = target.parentNode;
+                }
+                if (!good_target(target)) {
                     target = target.parentNode;
                 }
                 if (target && target.dataset && target.dataset.feedItemId) {
