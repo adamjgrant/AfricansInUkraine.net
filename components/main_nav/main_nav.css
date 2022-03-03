@@ -1,0 +1,4 @@
+[data-component="main_nav"] button.back,
+[data-component="main_nav"] ul.menu {
+    display: none;
+}
