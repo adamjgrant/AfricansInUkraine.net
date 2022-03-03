@@ -3,6 +3,10 @@
 }
 
 [data-component="feed_index"] h1 {
+  cursor: pointer;
+}
+
+[data-component="feed_index"] h1 {
   font-size: 1.1em;
   margin-bottom: 7px;
 }
