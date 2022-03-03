@@ -6,11 +6,25 @@
 
 <body>
     <div class="viewport">
-        <div data-component="feed_index">
-            Getting latest...
-        </div>
-        <div data-component="feed_view">
+        <nav data-component="main_nav">
+            <button class="back">&laquo; Back</button>
 
+            <button class="menu">Menu</button>
+
+            <ul>
+                <li>
+                    <a href="#" data-show-pane="updates">Updates</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div data-pane="Updates">
+            <div data-component="feed_index">
+                Getting latest...
+            </div>
+            <div data-component="feed_view">
+
+            </div>
         </div>
     </div>
     <script src="/vendor/mozart.js"></script>
@@ -24,6 +38,10 @@
     <script src="/components/feed_view/feed_view_events.js"></script>
     <script src="/components/feed_view/feed_view_acts.js"></script>
     <link rel="stylesheet" href="/components/feed_view/feed_view.css">
+
+    <script src="/components/main_nav/main_nav_events.js"></script>
+    <script src="/components/main_nav/main_nav_acts.js"></script>
+    <link rel="stylesheet" href="/components/main_nav/main_nav.css">
 
     <script>Mozart.init();</script>
 </body>
