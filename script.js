@@ -5,7 +5,7 @@ const components = [
 ];
 
 // AIRTABLE DATA
-const read_only_api_key="keyJs2secz3N4e6FT";
+const read_only_api_key = "keyJs2secz3N4e6FT";
 let airtable_data = {
     data: {
         updates: []
@@ -13,7 +13,7 @@ let airtable_data = {
     updates() {
         return new Promise((resolve, reject) => {
             let xhr = new XMLHttpRequest();
-            xhr.open("GET", "https://api.airtable.com/v0/appMFPyBf3gvvhoPD/Updates", true);
+            xhr.open("GET", "https://api.airtable.com/v0/appMFPyBf3gvvhoPD/Updates?view=News", true);
             xhr.setRequestHeader("Authorization", `Bearer ${read_only_api_key}`);
 
             xhr.onload = function() {
@@ -25,12 +25,12 @@ let airtable_data = {
                     reject();
                 }
             };
-              
+
             xhr.onerror = function() {
-              reject();
-              // There was a connection error of some sort
+                reject();
+                // There was a connection error of some sort
             };
-              
+
             xhr.send();
         })
     }
