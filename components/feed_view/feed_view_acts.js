@@ -8,7 +8,14 @@ m.feed_view.acts({
 
         _$.me().innerHTML = `
           <h1>${record.fields.Title}</h1>
-          <header>${record.fields.Author.name}<br>Last update: ${date}</header>
+          <header>
+            ${record.fields.Author.name}
+            <br>
+            Last update: ${date}
+            <div class="tags">
+              ${m.feed_index.act.make_tags_for_strings({ strings: record.fields.Locations })}
+            </div>
+          </header>
           <article>${converter.makeHtml(record.fields.Body)}</article>
         `;
         location.href = `#updates-${record.id}`;

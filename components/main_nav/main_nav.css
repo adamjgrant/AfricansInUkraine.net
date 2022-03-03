@@ -4,6 +4,7 @@
     background: black;
     width: 100%;
     border-bottom: 5px solid darkgreen;
+    position: relative;
 }
 
 [data-component="main_nav"] h1 {
@@ -19,6 +20,15 @@
     color: white;
     cursor: pointer;
     padding: 10px 20px;
+}
+
+[data-component="main_nav"] button.filter {
+    --height: 50px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: var(--height);
+    margin-top: calc(var(--height)/-2);
 }
 
 [data-component="main_nav"] ul.menu {

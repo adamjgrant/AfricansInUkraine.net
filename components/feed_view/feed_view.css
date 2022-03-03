@@ -15,6 +15,18 @@
     font-size: 0.85rem;
 }
 
+[data-component="feed_view"] .tags {
+    margin-top: 5px;
+}
+
+[data-component="feed_view"] .tag {
+    border-radius: 3px;
+    background: yellowgreen;
+    padding: 3px 5px;
+    margin-right: 5px;
+    color: white;
+}
+
 @media (min-width: 1000px) {
     .viewport [data-component="feed_view"] {
         display: block;

@@ -11,6 +11,13 @@ m.feed_index.acts({
         _$.act.bind_rows();
     },
 
+    make_tags_for_strings(_$, args) {
+        const strings = [].concat(args.strings).filter(s => !!s);
+        return strings.map(string => {
+            return `<span class="tag">${string}</span>`;
+        }).join("");
+    },
+
     priv: {
         create_row_markup(_$, args) {
             const r = args.record;
@@ -38,13 +45,6 @@ m.feed_index.acts({
                 </footer>
               </div>
             `;
-        },
-
-        make_tags_for_strings(_$, args) {
-            const strings = [].concat(args.strings).filter(s => !!s);
-            return strings.map(string => {
-                return `<span class="tag">${string}</span>`;
-            }).join("");
         },
 
         bind_rows(_$, args) {
