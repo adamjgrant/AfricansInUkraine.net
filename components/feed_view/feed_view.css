@@ -23,5 +23,7 @@
     .viewport [data-component="feed_view"] {
         display: block;
         width: calc(100vw - var(--sidebar-width) - var(--filters-sidebar-width));
+        max-height: calc(100vh - var(--main-nav-height));
+        overflow: auto;
     }
 }

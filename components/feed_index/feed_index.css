@@ -24,6 +24,8 @@
 @media (min-width: 1000px) {
     [data-component="feed_index"] {
         width: var(--sidebar-width);
+        max-height: calc(100vh - var(--main-nav-height));
+        overflow: auto;
     }
     .viewport.show-feed-view [data-component="feed_index"] {
         display: block;
