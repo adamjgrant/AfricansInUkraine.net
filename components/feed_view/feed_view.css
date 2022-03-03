@@ -1,0 +1,7 @@
+.viewport [data-component="feed_view"] {
+    display: none;
+}
+
+.viewport.show-feed-view [data-component="feed_view"] {
+    display: block;
+}

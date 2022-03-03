@@ -2,3 +2,10 @@
 [data-component="main_nav"] ul.menu {
     display: none;
 }
+
+.viewport.show-feed-view [data-component="main_nav"] button.back {
+    display: block;
+}
+.viewport.show-feed-view [data-component="main_nav"] button.menu {
+    display: none;
+}

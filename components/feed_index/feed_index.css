@@ -1,0 +1,3 @@
+.viewport.show-feed-view [data-component="feed_index"] {
+    display: none;
+}

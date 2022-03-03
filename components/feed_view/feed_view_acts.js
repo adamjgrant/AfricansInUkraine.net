@@ -5,6 +5,9 @@ m.feed_view.acts({
           <h1>${record.fields.Title}</h1>
           <article>${converter.makeHtml(record.fields.Body)}</article>
         `;
+        const vp = document.querySelector(".viewport")
+        vp.classList.add("show-feed-view");
+        vp.classList.add("show-menu-back");
     },
 
     priv: {
