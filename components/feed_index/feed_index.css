@@ -1,3 +1,16 @@
 .viewport.show-feed-view [data-component="feed_index"] {
     display: none;
 }
+
+[data-component="feed_index"] h1 {
+  font-size: 1.1em;
+  margin-bottom: 7px;
+}
+
+[data-component="feed_index"] article {
+  font-size: 1rem;
+}
+
+[data-component="feed_index"] article p:first-child {
+  margin-top: 0;
+}

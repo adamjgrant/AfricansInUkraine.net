@@ -1,4 +1,10 @@
 /* Measurements */
 :root {
     --main-nav-height: 60px;
+    --row-height: 75px;
+    --standard-padding: 25px;
+}
+
+html {
+    font-size: 16px;
 }

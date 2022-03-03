@@ -1,0 +1,14 @@
+[data-component="feed_index_item"] {
+    padding: 10px var(--standard-padding);
+    border-bottom: 1px solid #CCC;
+    height: var(--row-height);
+    max-height: var(--row-height);
+}
+
+[data-component="feed_index_item"] h1,
+[data-component="feed_index_item"] article,
+[data-component="feed_index_item"] p:first-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

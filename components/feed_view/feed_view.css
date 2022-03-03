@@ -5,3 +5,7 @@
 .viewport.show-feed-view [data-component="feed_view"] {
     display: block;
 }
+
+[data-component="feed_view"] {
+    padding: 0 var(--standard-padding);
+}
