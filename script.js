@@ -7,7 +7,9 @@ const components = [
 // AIRTABLE DATA
 const read_only_api_key="keyJs2secz3N4e6FT";
 let airtable_data = {
-    data: [],
+    data: {
+        updates: []
+    },
     updates() {
         return new Promise((resolve, reject) => {
             let xhr = new XMLHttpRequest();
@@ -17,8 +19,8 @@ let airtable_data = {
             xhr.onload = function() {
                 if (this.status >= 200 && this.status < 400) {
                     // Success!
-                    airtable_data.data = JSON.parse(this.response).records;
-                    resolve(airtable_data.data);
+                    airtable_data.data.updates = JSON.parse(this.response).records;
+                    resolve(airtable_data.data.updates);
                 } else {
                     reject();
                 }

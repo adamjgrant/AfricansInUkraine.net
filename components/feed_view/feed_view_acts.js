@@ -12,7 +12,7 @@ m.feed_view.acts({
 
     priv: {
         get_record_by_id(_$, args) {
-            return airtable_data.data.find(record => record.id === args.id);
+            return airtable_data.data.updates.find(record => record.id === args.id);
         }
     }
 });
