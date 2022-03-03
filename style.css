@@ -1,7 +1,8 @@
 /* Measurements */
+
 :root {
     --main-nav-height: 60px;
-    --row-height: 75px;
+    --row-height: 125px;
     --standard-padding: 25px;
 }
 
