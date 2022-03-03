@@ -1,5 +1,27 @@
+[data-pane="updates"] ul.filters {
+    display: none;
+}
+
 @media (min-width: 1000px) {
     [data-pane="updates"] {
         display: flex;
+    }
+    [data-pane="updates"] ul.filters {
+        display: block;
+        width: var(--filters-sidebar-width);
+        padding: var(--standard-padding);
+        margin-top: 0;
+        list-style: none;
+    }
+    [data-pane="updates"] ul.filters h1 {
+        margin: 0;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+    }
+    [data-pane="updates"] ul.filters li {
+        margin-bottom: 5px;
+    }
+    [data-pane="updates"] ul.filters [data-component="tag"] {
+        display: inline-block;
     }
 }

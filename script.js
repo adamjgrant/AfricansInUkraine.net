@@ -41,3 +41,8 @@ class Component extends Mozart {};
 let m = Component.index;
 
 components.forEach(component => new Component(component));
+
+// Duplicate filters into updates pane for desktop view
+const filters = document.querySelector("ul.filters");
+const updates_pane = document.querySelector(".viewport [data-pane='updates']");
+updates_pane.innerHTML += `<ul class="filters"><h1>Filters</h1>${filters.innerHTML}</ul>`;

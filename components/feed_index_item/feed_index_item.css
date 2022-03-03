@@ -32,11 +32,3 @@
 [data-component="feed_index_item"] .tags {
     margin-top: 5px;
 }
-
-[data-component="feed_index_item"] .tag {
-    border-radius: 3px;
-    background: yellowgreen;
-    padding: 3px 5px;
-    margin-right: 5px;
-    color: white;
-}

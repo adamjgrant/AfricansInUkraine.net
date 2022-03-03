@@ -1,0 +1,9 @@
+[data-component="tag"] {
+    border-radius: 3px;
+    background: yellowgreen;
+    padding: 3px 5px;
+    margin-right: 5px;
+    color: white;
+    font-size: 0.9rem;
+    text-decoration: none;
+}

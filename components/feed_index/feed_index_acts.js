@@ -14,7 +14,7 @@ m.feed_index.acts({
     make_tags_for_strings(_$, args) {
         const strings = [].concat(args.strings).filter(s => !!s);
         return strings.map(string => {
-            return `<span class="tag">${string}</span>`;
+            return `<span data-component="tag">${string}</span>`;
         }).join("");
     },
 
