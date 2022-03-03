@@ -31,9 +31,20 @@ m.feed_index.acts({
                   <h1><a href="#updates-${r.id}">${r.fields.Title}</a></h1>
                   ${truncated_body}
                 </article>
-                <footer>${r.fields.Author.name}<br>${date}</footer>
+                <footer>
+                  ${r.fields.Author.name}
+                  <br>${date}
+                  <div class="tags">${_$.act.make_tags_for_strings({ strings: r.fields.Locations })}</div>
+                </footer>
               </div>
             `;
+        },
+
+        make_tags_for_strings(_$, args) {
+            const strings = [].concat(args.strings).filter(s => !!s);
+            return strings.map(string => {
+                return `<span class="tag">${string}</span>`;
+            }).join("");
         },
 
         bind_rows(_$, args) {
