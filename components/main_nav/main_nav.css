@@ -3,6 +3,7 @@
     height: var(--main-nav-height);
     background: black;
     width: 100%;
+    border-bottom: 5px solid darkgreen;
 }
 
 [data-component="main_nav"] h1 {
@@ -66,10 +67,26 @@
 }
 
 @media (min-width: 1000px) {
-    .viewport.show-feed-view [data-component="main_nav"] button.menu {
-        display: block;
-    }
     .viewport.show-feed-view [data-component="main_nav"] button.back {
         display: none;
+    }
+    .viewport.show-feed-view [data-component="main_nav"] button.menu,
+    .viewport [data-component="main_nav"] button.menu {
+        display: block;
+        visibility: hidden;
+    }
+    [data-component="main_nav"] ul.menu {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+    [data-component="main_nav"] ul.menu a {
+        height: var(--main-nav-height);
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: var(--main-nav-height);
     }
 }

@@ -4,7 +4,11 @@
     --main-nav-height: 60px;
     --standard-padding: 25px;
     --desktop-width: 1000px;
-    --sidebar-width: 300px;
+    --sidebar-width: 350px;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html {
