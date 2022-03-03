@@ -33,7 +33,8 @@ m.feed_index.acts({
             })(converter.makeHtml(r.fields.Body));
 
             return `
-              <div data-component="feed_index_item" data-feed-item-id=${r.id}>
+              <div class="${r.fields.Pinned ? 'pinned': ''}" data-component="feed_index_item" data-feed-item-id=${r.id}>
+              ${r.fields.Pinned ? '<i class="fa-solid fa-thumbtack"></i>' : ''}
                 <article>
                   <h1><a href="#updates-${r.id}">${r.fields.Title}</a></h1>
                   ${truncated_body}

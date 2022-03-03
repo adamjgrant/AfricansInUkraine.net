@@ -8,6 +8,7 @@
     max-height: var(--row-height);
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 [data-component="feed_index_item"] article {
@@ -31,4 +32,19 @@
 
 [data-component="feed_index_item"] .tags {
     margin-top: 5px;
+}
+
+[data-component="feed_index_item"] .fa-solid.fa-thumbtack {
+    --spacing: 15px;
+    position: absolute;
+    top: var(--spacing);
+    right: var(--spacing);
+    background: white;
+    padding: 7px;
+    border-radius: 50%;
+    color: orange;
+}
+
+[data-component="feed_index_item"].pinned {
+    background: lightgoldenrodyellow;
 }
