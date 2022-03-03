@@ -1,3 +1,4 @@
-.viewport {
-    display:flex;
+/* Measurements */
+:root {
+    --main-nav-height: 60px;
 }
