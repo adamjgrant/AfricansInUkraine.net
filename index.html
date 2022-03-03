@@ -7,18 +7,23 @@
 <body>
     <div class="viewport">
         <div data-component="feed_index">
-
+            Getting latest...
         </div>
         <div data-component="feed_view">
 
         </div>
     </div>
     <script src="/vendor/mozart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.1/showdown.min.js"></script>
     <script src="/script.js"></script>
 
+    <script src="/components/feed_index/feed_index_events.js"></script>
     <script src="/components/feed_index/feed_index_acts.js"></script>
     <link rel="stylesheet" href="/components/feed_index/feed_index.css">
 
+    <script src="/components/feed_view/feed_view_events.js"></script>
     <script src="/components/feed_view/feed_view_acts.js"></script>
     <link rel="stylesheet" href="/components/feed_view/feed_view.css">
+
+    <script>Mozart.init();</script>
 </body>
