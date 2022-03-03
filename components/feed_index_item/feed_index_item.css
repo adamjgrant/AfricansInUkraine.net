@@ -1,4 +1,7 @@
 [data-component="feed_index_item"] {
+    --footer-height: 20px;
+    --article-height: 50px;
+    --row-height: 150px;
     padding: 10px var(--standard-padding);
     border-bottom: 1px solid #CCC;
     height: var(--row-height);
@@ -7,7 +10,16 @@
 
 [data-component="feed_index_item"] article {
     overflow: hidden;
-    max-height: calc(var(--row-height) - 50px);
+    height: calc(var(--row-height) - var(--article-height) - var(--footer-height));
+    max-height: calc(var(--row-height) - var(--article-height) - var(--footer-height));
+    margin-bottom: 10px;
+}
+
+[data-component="feed_index_item"] footer {
+    height: var(--footer-height);
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: var(--footer-height);
 }
 
 [data-component="feed_index_item"] h1 {

@@ -18,6 +18,7 @@ m.feed_index.acts({
               <div data-component="feed_index_item" data-feed-item-id=${r.id}>
                 <h1><a href="#updates-${r.id}">${r.fields.Title}</a></h1>
                 <article>${converter.makeHtml(r.fields.Body)}</article>
+                <footer>${r.fields.Author.name} ${r.fields["Modified on"]}</footer>
               </div>
             `;
         },
