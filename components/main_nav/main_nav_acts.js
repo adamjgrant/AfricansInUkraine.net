@@ -25,8 +25,8 @@ m.main_nav.acts({
 
     priv: {
         hide_all_panes(_$, args) {
-           const panes = Array.from(document.querySelectorAll("[data-pane]"));
-           panes.forEach(pane => pane.classList.add("hide"));
+            const panes = Array.from(document.querySelectorAll("[data-pane]"));
+            panes.forEach(pane => pane.classList.add("hide"));
         }
     }
 })

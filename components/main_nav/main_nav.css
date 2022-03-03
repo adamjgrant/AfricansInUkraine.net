@@ -39,28 +39,37 @@
 }
 
 [data-component="main_nav"] ul.menu a {
-  color: white; 
-  text-decoration: none;
-  display: block;
-  padding: 10px var(--standard-padding);
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px var(--standard-padding);
 }
 
+
 /* Toggling */
+
 [data-component="main_nav"] button.back,
 [data-component="main_nav"] ul.menu {
     display: none;
 }
 
 .viewport.show-menu [data-component="main_nav"] ul.menu {
-  display: block;
-}
-.viewport.show-menu-back [data-component="main_nav"] ul.menu {
-  display: none;
+    display: block;
 }
 
 .viewport.show-feed-view [data-component="main_nav"] button.back {
     display: block;
 }
+
 .viewport.show-feed-view [data-component="main_nav"] button.menu {
     display: none;
+}
+
+@media (min-width: 1000px) {
+    .viewport.show-feed-view [data-component="main_nav"] button.menu {
+        display: block;
+    }
+    .viewport.show-feed-view [data-component="main_nav"] button.back {
+        display: none;
+    }
 }

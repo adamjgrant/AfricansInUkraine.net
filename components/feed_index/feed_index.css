@@ -20,3 +20,12 @@
 [data-component="feed_index"] article p:first-child {
     margin-top: 0;
 }
+
+@media (min-width: 1000px) {
+    [data-component="feed_index"] {
+        width: var(--sidebar-width);
+    }
+    .viewport.show-feed-view [data-component="feed_index"] {
+        display: block;
+    }
+}
