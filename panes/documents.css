@@ -1,0 +1,3 @@
+[data-pane="documents"] iframe {
+    height: calc(100vh - (var(--main-nav-height)));
+}
