@@ -85,8 +85,13 @@
     }
     [data-component="main_nav"] ul.menu a {
         height: var(--main-nav-height);
-        padding-top: 0;
-        padding-bottom: 0;
+        padding: 0 15px;
         line-height: var(--main-nav-height);
+    }
+    [data-component="main_nav"] ul.menu li:first-child a {
+        margin-left: var(--standard-padding);
+    }
+    [data-component="main_nav"] ul.menu li {
+        display: inline-block;
     }
 }

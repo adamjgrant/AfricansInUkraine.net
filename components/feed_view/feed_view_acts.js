@@ -8,7 +8,7 @@ m.feed_view.acts({
 
         _$.me().innerHTML = `
           <h1>${record.fields.Title}</h1>
-          <header>${record.fields.Author.name}<br>${date}</header>
+          <header>${record.fields.Author.name}<br>Last update: ${date}</header>
           <article>${converter.makeHtml(record.fields.Body)}</article>
         `;
         location.href = `#updates-${record.id}`;

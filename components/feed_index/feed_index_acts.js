@@ -27,8 +27,10 @@ m.feed_index.acts({
 
             return `
               <div data-component="feed_index_item" data-feed-item-id=${r.id}>
-                <h1><a href="#updates-${r.id}">${r.fields.Title}</a></h1>
-                <article>${truncated_body}</article>
+                <article>
+                  <h1><a href="#updates-${r.id}">${r.fields.Title}</a></h1>
+                  ${truncated_body}
+                </article>
                 <footer>${r.fields.Author.name}<br>${date}</footer>
               </div>
             `;

@@ -1,22 +1,24 @@
 [data-component="feed_index_item"] {
     --footer-height: 35px;
-    --article-height: 60px;
     --row-height: 190px;
+    --article-height: calc(var(--row-height) - var(--footer-height));
     padding: 10px var(--standard-padding);
     border-bottom: 1px solid #CCC;
     height: var(--row-height);
     max-height: var(--row-height);
+    display: flex;
+    flex-direction: column;
 }
 
 [data-component="feed_index_item"] article {
     overflow: hidden;
-    height: calc(var(--row-height) - var(--article-height) - var(--footer-height));
-    max-height: calc(var(--row-height) - var(--article-height) - var(--footer-height));
-    margin-bottom: 10px;
+    height: var(--article-height);
+    max-height: var(--article-height);
 }
 
 [data-component="feed_index_item"] footer {
     height: var(--footer-height);
+    max-height: var(--footer-height);
     font-size: 0.85rem;
     color: #aaa;
     line-height: calc(var(--footer-height) /2);
