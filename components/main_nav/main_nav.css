@@ -27,6 +27,13 @@
     display: none;
 }
 
+.viewport.show-menu [data-component="main_nav"] ul.menu {
+  display: block;
+}
+.viewport.show-menu-back [data-component="main_nav"] ul.menu {
+  display: none;
+}
+
 .viewport.show-feed-view [data-component="main_nav"] button.back {
     display: block;
 }
