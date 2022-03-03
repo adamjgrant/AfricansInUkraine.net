@@ -5,6 +5,7 @@ m.feed_view.acts({
             let d = new Date(new Date(datetime_string).toLocaleString("en-US", { timeZone: "Europe/Kiev" }));
             return [d.toDateString(), d.toLocaleTimeString('en-US')].join(" ") + " Ukraine Time";
         })(record.fields["Modified on"]);
+        const body = converter.makeHtml(record.fields.Body.replace(/\n/g, "\n\n"));
 
         _$.me().innerHTML = `
           <h1>${record.fields.Title}</h1>
@@ -16,7 +17,7 @@ m.feed_view.acts({
               ${m.feed_index.act.make_tags_for_strings({ strings: record.fields.Locations })}
             </div>
           </header>
-          <article>${converter.makeHtml(record.fields.Body)}</article>
+          <article>${body}</article>
         `;
         location.href = `#updates-${record.id}`;
 
