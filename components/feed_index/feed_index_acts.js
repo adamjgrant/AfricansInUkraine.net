@@ -16,7 +16,7 @@ m.feed_index.acts({
             const r = args.record;
             return `
               <div data-component="feed_index_item" data-feed-item-id=${r.id}>
-                <h1>${r.fields.Title}</h1>
+                <h1><a href="#updates-${r.id}">${r.fields.Title}</a></h1>
                 <article>${converter.makeHtml(r.fields.Body)}</article>
               </div>
             `;

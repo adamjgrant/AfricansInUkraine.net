@@ -8,6 +8,7 @@ m.feed_view.acts({
         const vp = document.querySelector(".viewport")
         vp.classList.add("show-feed-view");
         vp.classList.add("show-menu-back");
+        location.href = `#updates-${record.id}`;
     },
 
     priv: {
