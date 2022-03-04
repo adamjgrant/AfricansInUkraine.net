@@ -91,6 +91,11 @@
     text-align: center;
 }
 
+[data-component="main_nav"] ul.menu a.active {
+    background: white;
+    color: darkgreen;
+}
+
 [data-component="main_nav"] ul.filters {
     right: 0;
     left: var(--standard-padding);

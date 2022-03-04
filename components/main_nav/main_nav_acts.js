@@ -23,12 +23,24 @@ m.main_nav.acts({
         my_pane.classList.remove("hide");
         _$.act.hide_filters();
         location.href = `#${name}`;
+        _$.act.set_active_tab({ name: name });
     },
 
     priv: {
         hide_all_panes(_$, args) {
             const panes = Array.from(document.querySelectorAll("[data-pane]"));
             panes.forEach(pane => pane.classList.add("hide"));
-        }
+        },
+
+        set_active_tab(_$, args) {
+            _$.act.unset_all_active_tabs();
+            const tab = _$(`[data-show-pane="${args.name}"]`);
+            tab.classList.add("active");
+        },
+
+        unset_all_active_tabs(_$, args) {
+            const tabs = _$("[data-show-pane]");
+            tabs.forEach(tab => tab.classList.remove("active"));
+        },
     }
 })
