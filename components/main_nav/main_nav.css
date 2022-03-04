@@ -5,6 +5,7 @@
     width: 100%;
     border-bottom: 5px solid darkgreen;
     position: relative;
+    padding-left: var(--standard-padding);
 }
 
 [data-component="main_nav"] h1 {
