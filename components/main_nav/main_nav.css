@@ -8,6 +8,10 @@
     padding-left: var(--standard-padding);
 }
 
+[data-component="main_nav"] .label {
+    display: none;
+}
+
 [data-component="main_nav"] h1 {
     color: white;
     font-size: 1rem;
@@ -84,6 +88,7 @@
     padding-bottom: 0;
     height: var(--main-nav-height);
     line-height: var(--main-nav-height);
+    text-align: center;
 }
 
 [data-component="main_nav"] ul.filters {
@@ -112,6 +117,12 @@
 
 .viewport.show-feed-view [data-component="main_nav"] button.back {
     display: block;
+}
+
+@media (min-width: 600px) {
+    [data-component="main_nav"] .label {
+        display: inline-block;
+    }
 }
 
 @media (min-width: 1000px) {
