@@ -18,6 +18,10 @@ m.feed_index.acts({
         }).join("");
     },
 
+    look_for_permalink(_$, args) {
+        m.feed_view.act.load_in_data({ id: records[0].id, silent: true });
+    },
+
     priv: {
         create_row_markup(_$, args) {
             const r = args.record;

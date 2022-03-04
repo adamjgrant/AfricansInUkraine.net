@@ -71,6 +71,10 @@
     display: inline-block;
 }
 
+[data-component="main_nav"] ul.menu li.hide {
+    display: none;
+}
+
 [data-component="main_nav"] ul.menu a {
     color: white;
     text-decoration: none;
@@ -139,5 +143,8 @@
     }
     [data-component="main_nav"] ul.menu li {
         display: inline-block;
+    }
+    [data-component="main_nav"] ul.menu li.hide {
+        display: none;
     }
 }

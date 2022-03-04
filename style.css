@@ -24,3 +24,7 @@ p {
 h1 {
     font-weight: 500;
 }
+
+.hide {
+    display: none;
+}
