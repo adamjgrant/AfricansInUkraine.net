@@ -1,4 +1,10 @@
 [data-pane="help"] iframe {
     width: 100vw;
-    height: calc(100vh - var(--main-nav-height));
+    height: calc(100vh - var(--main-nav-height)*2);
+}
+
+@media (min-width: 1000px) {
+    [data-pane="help"] iframe {
+        height: calc(100vh - var(--main-nav-height));
+    }
 }
