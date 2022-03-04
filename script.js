@@ -1,7 +1,8 @@
 const components = [
     "feed_index",
     "feed_view",
-    "main_nav"
+    "main_nav",
+    "spinner"
 ];
 
 // AIRTABLE DATA
