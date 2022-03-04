@@ -119,7 +119,7 @@
     display: block;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
     [data-component="main_nav"] .label {
         display: inline-block;
     }
