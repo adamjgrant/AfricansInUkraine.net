@@ -9,6 +9,15 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    cursor: pointer;
+}
+
+[data-component="feed_index_item"]:hover {
+    background: #EEE;
+}
+
+[data-component="feed_index_item"].pinned:hover {
+    background: rgb(251, 251, 180);
 }
 
 [data-component="feed_index_item"] article {
