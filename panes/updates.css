@@ -1,3 +1,8 @@
+[data-pane="updates"] {
+    max-height: calc(100vh - var(--main-nav-height)*2);
+    overflow: auto;
+}
+
 [data-pane="updates"] ul.filters {
     display: none;
 }
@@ -5,6 +10,8 @@
 @media (min-width: 1000px) {
     [data-pane="updates"] {
         display: flex;
+        max-height: calc(100vh - var(--main-nav-height));
+        overflow: hidden;
     }
     [data-pane="updates"] ul.filters {
         display: block;
