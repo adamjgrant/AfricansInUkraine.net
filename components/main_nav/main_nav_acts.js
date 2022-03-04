@@ -21,6 +21,7 @@ m.main_nav.acts({
         _$.act.hide_all_panes();
         my_pane.classList.remove("hide");
         _$.act.hide_filters();
+        location.href = `#${name}`;
     },
 
     priv: {
