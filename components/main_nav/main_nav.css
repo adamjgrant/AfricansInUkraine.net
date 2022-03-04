@@ -23,6 +23,10 @@
     padding: 10px 20px;
 }
 
+[data-component="main_nav"] button.back {
+    padding-left: 0;
+}
+
 [data-component="main_nav"] button.filters {
     --height: 50px;
     position: absolute;
@@ -32,7 +36,6 @@
     margin-top: calc(var(--height)/-2);
 }
 
-[data-component="main_nav"] ul.menu,
 [data-component="main_nav"] ul.filters {
     position: fixed;
     top: var(--main-nav-height);
@@ -45,11 +48,26 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    z-index: 2;
+}
+
+[data-component="main_nav"] ul.menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: var(--main-nav-height);
+    overflow: auto;
+    background: black;
+    color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 [data-component="main_nav"] ul.menu li {
-    display: block;
+    display: inline-block;
 }
 
 [data-component="main_nav"] ul.menu a {
@@ -57,6 +75,10 @@
     text-decoration: none;
     display: block;
     padding: 10px var(--standard-padding);
+    padding-top: 0;
+    padding-bottom: 0;
+    height: var(--main-nav-height);
+    line-height: var(--main-nav-height);
 }
 
 [data-component="main_nav"] ul.filters {
@@ -75,21 +97,8 @@
 /* Toggling */
 
 [data-component="main_nav"] button.back,
-[data-component="main_nav"] ul.filters,
-[data-component="main_nav"] ul.menu {
+[data-component="main_nav"] ul.filters {
     display: none;
-}
-
-.viewport.show-menu ul.filters {
-    display: none;
-}
-
-.viewport.show-filters ul.menu {
-    display: none;
-}
-
-.viewport.show-menu [data-component="main_nav"] ul.menu {
-    display: block;
 }
 
 .viewport.show-filters [data-component="main_nav"] ul.filters {
@@ -98,10 +107,6 @@
 
 .viewport.show-feed-view [data-component="main_nav"] button.back {
     display: block;
-}
-
-.viewport.show-feed-view [data-component="main_nav"] button.menu {
-    display: none;
 }
 
 @media (min-width: 1000px) {
@@ -115,6 +120,7 @@
         visibility: hidden;
     }
     [data-component="main_nav"] ul.menu {
+        background: transparent;
         display: block;
         position: relative;
         top: auto;
