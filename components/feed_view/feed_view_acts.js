@@ -6,6 +6,12 @@ m.feed_view.acts({
             return [d.toDateString(), d.toLocaleTimeString('en-US')].join(" ") + " Ukraine Time";
         })(record.fields["Modified on"]);
         const body = converter.makeHtml(record.fields.Body.replace(/\n/g, "\n\n"));
+        const image_url = ((fields) => {
+            if (!fields.Attachments) return "";
+            if (!fields.Attachments.length) return "";
+            if (!fields.Attachments[0].url) return "";
+            return fields.Attachments[0].url;
+        })(record.fields)
 
         _$.me().innerHTML = `
           <h1>${record.fields.Title}</h1>
@@ -19,7 +25,7 @@ m.feed_view.acts({
           </header>
           <article>${body}
             <br>
-            <img src="${record.fields.Attachments[0].url}">
+            <img src="${image_url}">
           </article>
         `;
         location.href = `#updates-${record.id}`;

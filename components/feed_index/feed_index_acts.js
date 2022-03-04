@@ -19,7 +19,7 @@ m.feed_index.acts({
     },
 
     look_for_permalink(_$, args) {
-        m.feed_view.act.load_in_data({ id: records[0].id, silent: true });
+        m.feed_view.act.load_in_data({ id: args.records[0].id, silent: true });
     },
 
     priv: {
