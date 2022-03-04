@@ -6,4 +6,5 @@ m.main_nav.events(_$ => {
         pane_trigger.addEventListener("click", (e) => _$.act.show_pane({ target: e.target }));
     })
     _$.act.show_pane({ target: show_pane_buttons[0] });
+    _$.act.look_for_page_name();
 });
