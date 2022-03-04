@@ -17,7 +17,10 @@ m.feed_view.acts({
               ${m.feed_index.act.make_tags_for_strings({ strings: record.fields.Locations })}
             </div>
           </header>
-          <article>${body}</article>
+          <article>${body}
+            <br>
+            <img src="${record.fields.Attachments[0].url}">
+          </article>
         `;
         location.href = `#updates-${record.id}`;
 
