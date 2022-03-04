@@ -8,6 +8,11 @@
     padding-left: var(--standard-padding);
 }
 
+[data-component="main_nav"] a {
+    color: white;
+    text-decoration: none;
+}
+
 [data-component="main_nav"] .label {
     font-size: 0.75rem;
     text-transform: uppercase;
