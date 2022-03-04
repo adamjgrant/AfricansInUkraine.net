@@ -61,7 +61,7 @@
     right: 0;
     height: var(--main-nav-height);
     overflow: auto;
-    background: black;
+    background: darkgreen;
     color: white;
     list-style: none;
     margin: 0;
