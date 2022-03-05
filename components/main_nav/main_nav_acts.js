@@ -30,7 +30,7 @@ m.main_nav.acts({
         _$.act.hide_all_panes();
         my_pane.classList.remove("hide");
         _$.act.hide_filters();
-        location.href = `#${name}`;
+        window.history.pushState(window.history.state, `${name}`, `/${name}`);
         _$.act.set_active_tab({ name: name });
     },
 
