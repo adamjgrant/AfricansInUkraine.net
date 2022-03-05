@@ -21,7 +21,7 @@ m.main_nav.acts({
     },
 
     show_pane(_$, args) {
-        const name = args.name || args.target.dataset.showPane;
+        const name = args.target.dataset.showPane;
         const my_pane = document.querySelector(`[data-pane="${name}"]`);
         _$.act.hide_all_panes();
         my_pane.classList.remove("hide");
