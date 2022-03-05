@@ -28,7 +28,7 @@ m.feed_view.acts({
             <img src="${image_url}">
           </article>
         `;
-        location.href = `#updates-${record.id}`;
+        // location.href = `#updates-${record.id}`;
 
         if (!args.silent) {
             const vp = document.querySelector(".viewport")
