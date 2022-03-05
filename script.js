@@ -34,6 +34,32 @@ let airtable_data = {
 
             xhr.send();
         })
+    },
+
+    about() {
+        return new Promise((resolve, reject) => {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://api.airtable.com/v0/appMFPyBf3gvvhoPD/About?view=API&maxRecords=1", true);
+            xhr.setRequestHeader("Authorization", `Bearer ${read_only_api_key}`);
+
+            xhr.onload = function() {
+                if (this.status >= 200 && this.status < 400) {
+                    // Success!
+                    airtable_data.data.about = JSON.parse(this.response).records;
+                    airtable_data.data.about = airtable_data.data.about[0];
+                    resolve(airtable_data.data.about);
+                } else {
+                    reject();
+                }
+            };
+
+            xhr.onerror = function() {
+                reject();
+                // There was a connection error of some sort
+            };
+
+            xhr.send();
+        })
     }
 }
 
@@ -47,3 +73,15 @@ components.forEach(component => new Component(component));
 const filters = document.querySelector("ul.filters");
 const updates_pane = document.querySelector(".viewport [data-pane='updates']");
 updates_pane.innerHTML += `<ul class="filters"><h1>Filters</h1>${filters.innerHTML}</ul>`;
+
+// Populate about page
+airtable_data.about().then(record => {
+    const about_pane = document.querySelector(".viewport [data-pane='about']");
+    const body = converter.makeHtml(record.fields.Body.replace(/\n/g, "\n\n"));
+    about_pane.innerHTML = `
+      <h1>${record.fields.Heading}</h1>
+      <article>
+        ${body}
+      </article>
+    `;
+});
