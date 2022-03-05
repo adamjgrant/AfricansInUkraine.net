@@ -1,3 +1,9 @@
 [data-pane="about"] {
     padding: var(--standard-padding);
 }
+
+@media (min-width: 1000px) {
+    [data-pane="about"] {
+        padding-right: calc(100vw - 700px);
+    }
+}
