@@ -17,6 +17,7 @@
     font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: 500;
+    display: none;
 }
 
 [data-component="main_nav"] h1 {
@@ -131,13 +132,19 @@
     display: block;
 }
 
+@media (min-width: 400px) {
+    [data-component="main_nav"] .label {
+        display: inline-block;
+    }
+}
+
 @media (min-width: 500px) {
     [data-component="main_nav"] .label {
         font-size: 1rem;
         text-transform: none;
     }
     [data-component="main_nav"] ul.menu a {
-        padding: 10px var(--standard-padding);
+        padding: 0 var(--standard-padding);
     }
 }
 
