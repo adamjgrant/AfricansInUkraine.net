@@ -1,3 +1,6 @@
+m.main_nav.iframes = {
+    map: "https://liveuamap.com/"
+}
 m.main_nav.acts({
     go_back(_$, args) {
         const vp = document.querySelector(".viewport");
@@ -32,12 +35,22 @@ m.main_nav.acts({
         _$.act.hide_filters();
         window.history.pushState(window.history.state, `${name}`, `/${name}`);
         _$.act.set_active_tab({ name: name });
+        _$.act.load_iframe({ name: name });
     },
 
     priv: {
         hide_all_panes(_$, args) {
             const panes = Array.from(document.querySelectorAll("[data-pane]"));
             panes.forEach(pane => pane.classList.add("hide"));
+        },
+
+        load_iframe(_$, args) {
+            if (!args.name || !m.main_nav.iframes[args.name]) return console.info(`No iframe for ${args.name}`);
+            const pane = document.querySelector(`[data-pane="${args.name}"]`);
+            const iframe = document.createElement("iframe");
+            iframe.src = m.main_nav.iframes[args.name];
+            pane.innerHTML = "";
+            pane.appendChild(iframe);
         },
 
         set_active_tab(_$, args) {

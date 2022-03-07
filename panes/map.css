@@ -1,0 +1,4 @@
+[data-pane="map"] iframe {
+  width: 100vw;
+  height: calc(100vh - var(--main-nav-height) * 2);
+}
