@@ -60,6 +60,32 @@ let airtable_data = {
 
             xhr.send();
         })
+    },
+
+    channels() {
+        return new Promise((resolve, reject) => {
+            let xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://api.airtable.com/v0/appMFPyBf3gvvhoPD/Channels?view=About%20Page", true);
+            xhr.setRequestHeader("Authorization", `Bearer ${read_only_api_key}`);
+
+            xhr.onload = function() {
+                if (this.status >= 200 && this.status < 400) {
+                    // Success!
+                    airtable_data.data.about = JSON.parse(this.response).records;
+                    airtable_data.data.about = airtable_data.data.channels[0];
+                    resolve(airtable_data.data.channels);
+                } else {
+                    reject();
+                }
+            };
+
+            xhr.onerror = function() {
+                reject();
+                // There was a connection error of some sort
+            };
+
+            xhr.send();
+        })
     }
 }
 
@@ -82,6 +108,27 @@ airtable_data.about().then(record => {
       <h1>${record.fields.Heading}</h1>
       <article>
         ${body}
+        <br>
       </article>
+      <aside>
+        <div class="social">
+          <a href="https://instagram.com/${record.fields["Instagram handle"]}">
+            <i class="fa-brands fa-instagram"></i>
+            @${record.fields["Instagram handle"]}
+          </a>
+        </div>
+        <div class="social">
+          <a href="https://twitter.com/${record.fields["Twitter handle"]}">
+            <i class="fa-brands fa-twitter"></i>
+            @${record.fields["Twitter handle"]}
+          </a>
+        </div>
+      </aside>
+    `;
+});
+
+airtable_data.channels().then(record => {
+    const about_pane = document.querySelector(".viewport [data-pane='about']");
+    about_pane.innerHTML += `
     `;
 });
