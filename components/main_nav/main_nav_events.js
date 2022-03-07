@@ -5,6 +5,10 @@ m.main_nav.events(_$ => {
     show_pane_buttons.forEach(pane_trigger => {
         pane_trigger.addEventListener("click", (e) => _$.act.show_pane({ target: e.target }));
     })
-    _$.act.show_pane({ target: show_pane_buttons[0] });
-    _$.act.look_for_page_name();
+    if (!_$.act.has_page_name()) {
+        _$.act.show_pane({ target: show_pane_buttons[0] });
+    }
+    else {
+        _$.act.look_for_page_name();
+    }
 });

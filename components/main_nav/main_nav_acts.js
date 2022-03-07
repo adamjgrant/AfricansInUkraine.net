@@ -18,6 +18,11 @@ m.main_nav.acts({
         vp.classList.remove("show-filters");
     },
 
+    has_page_name(_$, args) {
+        const page_name = location.pathname.split("/").filter(i => i !== "").reverse()[0];
+        return !!page_name;
+    },
+
     look_for_page_name(_$, args) {
         const page_name = location.pathname.split("/").filter(i => i !== "").reverse()[0];
         if (page_name) _$.act.show_pane({ name: page_name });
