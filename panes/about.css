@@ -2,9 +2,23 @@
     padding: var(--standard-padding);
 }
 
+[data-pane="about"] a[href] {
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
 [data-pane="about"] .social {
     display: block;
     margin-bottom: 15px;
+}
+
+[data-pane="about"] .group {
+    display: block;
+    margin-bottom: 15px;
+}
+
+[data-pane="about"] .group h1 {
+    font-size: 1.3rem;
 }
 
 @media (min-width: 1000px) {

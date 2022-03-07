@@ -71,8 +71,8 @@ let airtable_data = {
             xhr.onload = function() {
                 if (this.status >= 200 && this.status < 400) {
                     // Success!
-                    airtable_data.data.about = JSON.parse(this.response).records;
-                    airtable_data.data.about = airtable_data.data.channels[0];
+                    airtable_data.data.channels = JSON.parse(this.response).records;
+                    airtable_data.data.channels = airtable_data.data.channels;
                     resolve(airtable_data.data.channels);
                 } else {
                     reject();
@@ -127,8 +127,14 @@ airtable_data.about().then(record => {
     `;
 });
 
-airtable_data.channels().then(record => {
+airtable_data.channels().then(records => {
     const about_pane = document.querySelector(".viewport [data-pane='about']");
-    about_pane.innerHTML += `
-    `;
+    records.forEach(record => {
+        about_pane.innerHTML += `
+        <div class="group">
+            <h1><a href="${record.fields.Link}"><i class="fa-brands fa-telegram"></i> ${record.fields.Name}</a></h1>
+            <p>${record.fields.Description}</p>
+        </div>
+        `;
+    });
 });
