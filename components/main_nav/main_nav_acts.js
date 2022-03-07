@@ -46,7 +46,7 @@ m.main_nav.acts({
 
         load_iframe(_$, args) {
             if (!args.name || !m.main_nav.iframes[args.name]) return console.info(`No iframe for ${args.name}`);
-            const pane = document.querySelector(`[data-pane="${args.name}"]`);
+            const pane = document.querySelector(`[data-pane="${args.name}"] .iframe-container`);
             const iframe = document.createElement("iframe");
             iframe.src = m.main_nav.iframes[args.name];
             pane.innerHTML = "";
