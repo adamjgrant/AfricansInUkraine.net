@@ -37,15 +37,19 @@
 
 @media (min-width: 1000px) {
     [data-pane="about"] {
-        padding-right: calc(100vw - 1000px);
+        --area-width: 1000px;
+        --sidebar-width: 300px;
+        padding-right: calc(100vw - var(--area-width));
         display: flex;
     }
 
     [data-pane="about"] article {
-        width: 100%;
+        width: calc(var(--area-width) - var(--sidebar-width));
+        padding-right: var(--standard-padding);
     }
 
     [data-pane="about"] aside {
-        width: 300px;
+        width: var(--sidebar-width);
+        padding-right: var(--standard-padding);
     }
 }
