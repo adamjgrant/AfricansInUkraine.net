@@ -18,6 +18,8 @@
 
 [data-pane="about"] h2 {
     margin-top: 50px;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 [data-pane="about"] .group {
