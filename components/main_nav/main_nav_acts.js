@@ -1,5 +1,5 @@
 m.main_nav.iframes = {
-    map: "https://maphub.net/Cen4infoRes/russian-ukraine-monitor"
+    map: "https://liveuamap.com/"
 }
 m.main_nav.acts({
     go_back(_$, args) {
