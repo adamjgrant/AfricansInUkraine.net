@@ -6,23 +6,46 @@
     text-decoration: none;
     color: cornflowerblue;
 }
+[data-pane="about"] aside {
+    display: block;
+    margin-bottom: 40px;
+}
 
 [data-pane="about"] .social {
     display: block;
     margin-bottom: 15px;
 }
 
+[data-pane="about"] h2 {
+    margin-top: 50px;
+}
+
 [data-pane="about"] .group {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 [data-pane="about"] .group h1 {
     font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+[data-pane="about"] .group p {
+    margin-top: 0px;
+    margin-left: 25px;
 }
 
 @media (min-width: 1000px) {
     [data-pane="about"] {
-        padding-right: calc(100vw - 700px);
+        padding-right: calc(100vw - 1000px);
+        display: flex;
+    }
+
+    [data-pane="about"] article {
+        width: 100%;
+    }
+
+    [data-pane="about"] aside {
+        width: 300px;
     }
 }

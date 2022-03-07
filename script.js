@@ -104,13 +104,15 @@ updates_pane.innerHTML += `<ul class="filters"><h1>Filters</h1>${filters.innerHT
 airtable_data.about().then(record => {
     const about_pane = document.querySelector(".viewport [data-pane='about']");
     const body = converter.makeHtml(record.fields.Body.replace(/\n/g, "\n\n"));
-    about_pane.innerHTML = `
-      <h1>${record.fields.Heading}</h1>
+    about_pane.innerHTML += `
       <article>
+        <h1>${record.fields.Heading}</h1>
+        <img src="${record.fields.Logo[0].thumbnails.large.url}">
         ${body}
         <br>
       </article>
       <aside>
+        <h2>Social Media</h2>
         <div class="social">
           <a href="https://instagram.com/${record.fields["Instagram handle"]}">
             <i class="fa-brands fa-instagram"></i>
@@ -125,16 +127,19 @@ airtable_data.about().then(record => {
         </div>
       </aside>
     `;
-});
 
-airtable_data.channels().then(records => {
-    const about_pane = document.querySelector(".viewport [data-pane='about']");
-    records.forEach(record => {
-        about_pane.innerHTML += `
-        <div class="group">
-            <h1><a href="${record.fields.Link}"><i class="fa-brands fa-telegram"></i> ${record.fields.Name}</a></h1>
-            <p>${record.fields.Description}</p>
-        </div>
-        `;
+    airtable_data.channels().then(records => {
+        const about_pane_aside = document.querySelector(".viewport [data-pane='about'] aside");
+        let html = "<h2>Telegram Groups</h2>";
+        records.forEach(record => {
+            html += `
+            <div class="group">
+                <h1><a href="${record.fields.Link}"><i class="fa-brands fa-telegram"></i> ${record.fields.Name}</a></h1>
+                <p>${record.fields.Description}</p>
+            </div>
+            `;
+        });
+        html += "</aside>";
+        about_pane_aside.innerHTML += html;
     });
 });
