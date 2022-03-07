@@ -107,9 +107,16 @@ airtable_data.about().then(record => {
     about_pane.innerHTML += `
       <article>
         <h1>${record.fields.Heading}</h1>
-        <img src="${record.fields.Logo[0].thumbnails.large.url}">
+        <img src="${record.fields.Logo ? record.fields.Logo[0].thumbnails.large.url : ""}">
         ${body}
         <br>
+        <div class="donate">
+            <h2>Donate</h2>
+            <img src="${record.fields["Donate QR code"] ? record.fields["Donate QR code"][0].thumbnails.large.url : ""}">
+            <p><a href="${record.fields["Donate Link"]}">
+              ${record.fields["Donate Text"]} 
+            </a></p>
+        </div>
       </article>
       <aside>
         <h2>Social Media</h2>

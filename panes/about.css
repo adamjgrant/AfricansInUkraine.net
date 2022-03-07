@@ -37,6 +37,10 @@
     margin-left: 20px;
 }
 
+[data-pane="about"] .donate img {
+    max-width: 200px;
+}
+
 @media (min-width: 1000px) {
     [data-pane="about"] {
         --area-width: 1000px;
