@@ -26,13 +26,13 @@
 }
 
 [data-pane="about"] .group h1 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 8px;
 }
 
 [data-pane="about"] .group p {
     margin-top: 0px;
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 @media (min-width: 1000px) {
