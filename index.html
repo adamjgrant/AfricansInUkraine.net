@@ -19,9 +19,6 @@
             <h1><a href="/">Africans In Ukraine</a></h1>
 
             <ul class="menu">
-                <li class="hide">
-                    <a href="#" data-show-pane="updates"><i class="fa-solid fa-newspaper"></i> <span class="label">Updates</span></a>
-                </li>
                 <li>
                     <a href="#" data-show-pane="documents">
                         <i class="fa-solid fa-file"></i> <span class="label">Docs</span>
@@ -44,7 +41,13 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#" data-show-pane="missing"><i class="fa-solid fa-search"></i> <span class="label">Missing Persons</span></a>
+                </li>
+                <li>
                     <a href="#" data-show-pane="about"><i class="fa-solid fa-circle-info"></i> <span class="label">About</span></a>
+                </li>
+                <li class="hide">
+                    <a href="#" data-show-pane="updates"><i class="fa-solid fa-newspaper"></i> <span class="label">Updates</span></a>
                 </li>
             </ul>
 
@@ -77,15 +80,6 @@
             </ul>
         </nav>
 
-        <div data-pane="updates">
-            <div data-component="feed_index">
-                <div style="padding: 25px">Getting latest...</div>
-            </div>
-            <div data-component="feed_view">
-
-            </div>
-        </div>
-
         <div data-pane="documents">
             <iframe class="airtable-embed" src="https://airtable.com/embed/shrgyvKqUW4sozOHe?backgroundColor=green" frameborder="0" onmousewheel="" width="100%" height="100%" style=""></iframe>
         </div>
@@ -106,8 +100,23 @@
             <div class="iframe-container"></div>
         </div>
 
+        <div data-pane="missing">
+            <a class="button" target="_blank" href="https://airtable.com/shrhVIDvDFTRjx2JB">Report a missing person</a>
+            <div class="iframe-container"></div>
+        </div>
+
         <div data-pane="about">
         </div>
+
+        <div data-pane="updates">
+            <div data-component="feed_index">
+                <div style="padding: 25px">Getting latest...</div>
+            </div>
+            <div data-component="feed_view">
+
+            </div>
+        </div>
+
 
         <div data-component="spinner">
             <div class="lds-dual-ring"></div>
@@ -151,5 +160,6 @@
     <link rel="stylesheet" href="/panes/help.css">
     <link rel="stylesheet" href="/panes/volunteer.css">
     <link rel="stylesheet" href="/panes/map.css">
+    <link rel="stylesheet" href="/panes/missing.css">
     <link rel="stylesheet" href="/panes/about.css">
 </body>

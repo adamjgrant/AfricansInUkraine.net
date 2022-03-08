@@ -1,0 +1,25 @@
+[data-pane="missing"] {
+    --secondary-nav-height: 88px;
+}
+
+[data-pane="missing"] .button {
+    padding: 10px 15px;
+    margin: var(--standard-padding);
+    border-radius: 5px;
+    background: darkgreen;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+[data-pane="missing"] iframe {
+    width: 100vw;
+    height: calc(100vh - var(--main-nav-height)*2 - var(--secondary-nav-height));
+}
+
+@media (min-width: 1000px) {
+    [data-pane="missing"] iframe {
+        height: calc(100vh - var(--main-nav-height) - var(--secondary-nav-height));
+    }
+}
