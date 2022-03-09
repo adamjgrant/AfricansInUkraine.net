@@ -1,9 +1,9 @@
 [data-pane="volunteer"] iframe {
-    height: calc(100vh - (var(--main-nav-height)*2));
+    height: calc(var(--100vvh, 100vh) - (var(--main-nav-height)*2));
 }
 
 @media (min-width: 1000px) {
     [data-pane="volunteer"] iframe {
-        height: calc(100vh - var(--main-nav-height));
+        height: calc(var(--100vvh, 100vh) - var(--main-nav-height));
     }
 }
