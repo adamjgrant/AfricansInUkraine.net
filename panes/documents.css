@@ -1,4 +1,5 @@
 [data-pane="documents"] iframe {
+    width: 100vw;
     height: calc(var(--100vvh, 100vh) - (var(--main-nav-height)*2));
 }
 
