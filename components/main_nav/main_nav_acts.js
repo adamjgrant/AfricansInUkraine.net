@@ -4,7 +4,7 @@ m.main_nav.iframes = {
     missing: "https://airtable.com/embed/shralumhkmGhMOynB?backgroundColor=green&viewControls=on",
     media: "https://airtable.com/embed/shrFWFWJVuG2N9Jbs",
     documents: "https://airtable.com/embed/shrgyvKqUW4sozOHe?backgroundColor=green",
-    channels: "https://airtable.com/embed/shrgyvKqUW4sozOHe?backgroundColor=green",
+    channels: "https://airtable.com/embed/shrqVjBcHhMNwOTMc",
     help: "https://docs.google.com/forms/d/15Tbnq-HijSjYEYFjEP5CCUMevY1fy3YU8V4x4_KmTbI/viewform?ts=6223a907&edit_requested=true"
 }
 m.main_nav.acts({
