@@ -1,3 +1,1 @@
-m.spinner.events(_$ => {
-    _$.act.bind_spinner();
-})
+m.spinner.events(_$ => {})
