@@ -3,7 +3,9 @@ m.main_nav.iframes = {
     map: "https://www.google.com/maps/d/embed?mid=180u1IkUjtjpdJWnIC0AxTKSiqK4G6Pez&hl=en_US&ehbc=2E312F",
     missing: "https://airtable.com/embed/shralumhkmGhMOynB?backgroundColor=green&viewControls=on",
     media: "https://airtable.com/embed/shrFWFWJVuG2N9Jbs",
-    documents: "https://airtable.com/embed/shrgyvKqUW4sozOHe?backgroundColor=green"
+    documents: "https://airtable.com/embed/shrgyvKqUW4sozOHe?backgroundColor=green",
+    channels: "https://airtable.com/embed/shrgyvKqUW4sozOHe?backgroundColor=green",
+    volunteer: "https://airtable.com/embed/shrgyvKqUW4sozOHe?backgroundColor=green"
 }
 m.main_nav.acts({
     go_back(_$, args) {
