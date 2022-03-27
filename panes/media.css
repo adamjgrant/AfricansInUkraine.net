@@ -3,6 +3,12 @@
     height: calc(var(--100vvh, 100vh) - (var(--main-nav-height)*2));
 }
 
+[data-pane="media"] p {
+    margin: 10px 15px;
+    max-width: 600px;
+    font-size: 0.85rem;
+}
+
 @media (min-width: 1000px) {
     [data-pane="media"] iframe {
         height: calc(var(--100vvh, 100vh) - var(--main-nav-height));
